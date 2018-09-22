@@ -1,9 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+
 html {
   height: 100%;
 }
 
 body {
+  font-family: 'Rock Salt', cursive;
   margin: 0;
   min-height: 100%;
-  font: 16px / 1 sans-serif;
+  /* background-image: url(./notebook-paper.jpg); */
+  background-size: cover;
+
+
+}
+header, footer, main{
+  display: flex;
+  justify-content: center;
+}
+td {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+td {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+td {
+  width:100px;
+  text-align: center;
+  height: 100px;
+  font-size: 35px;
+}
+table {
+  border-collapse: collapse;
+}
+.red {
+  color:red;
+}
+.blue {
+  color:blue;
 }
