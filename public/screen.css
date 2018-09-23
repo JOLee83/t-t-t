@@ -31,6 +31,7 @@ td {
   text-align: center;
   height: 90px;
   font-size: 35px;
+
 }
 table tr:first-child td{
   border-top: 0;
@@ -46,13 +47,19 @@ table tr td:last-child {
 }
 table {
   border-collapse: collapse;
+
 }
-.red {
+h3.red {
   color:red;
+  animation: xo 2s linear;
+
 }
-.blue {
+h3.blue {
   color:blue;
+  animation: xo 2s linear;
+
 }
+
 button {
   width: 120px;
   border-radius: 5px;
@@ -65,6 +72,7 @@ h3 {
   font-size: 35px;
   padding: 0;
   margin: 0;
+
 }
 @media (min-width: 600px) {
   td {
@@ -76,8 +84,17 @@ h3 {
     font-size: 50px;
   }
   body {
-    background-size: 600px 100%;
+    background-size: 600px 800px;
     background-repeat: no-repeat;
     background-position: center;
+  }
+}
+@keyframes xo {
+  from {
+    transform:scale(.1)
+  }
+  
+  to {
+    transform:scale(1)
   }
 }
