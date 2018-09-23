@@ -1,5 +1,3 @@
-//let playerX = 'X'
-//let playerO = 'O'
 let playerCount = 0
 
 const checkWinner = () => {
@@ -51,11 +49,11 @@ const checkWinner = () => {
 }
 let playerTurn0 = () => {
   if (playerCount === 0) {
-    document.querySelector('.zero').textContent = 'X'
+    document.querySelector('.zero').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.zero').textContent = 'O'
+    document.querySelector('.zero').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.zero').removeEventListener('click', playerTurn0)
@@ -63,11 +61,11 @@ let playerTurn0 = () => {
 }
 let playerTurn1 = () => {
   if (playerCount === 0) {
-    document.querySelector('.one').textContent = 'X'
+    document.querySelector('.one').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.one').textContent = 'O'
+    document.querySelector('.one').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.one').removeEventListener('click', playerTurn1)
@@ -75,11 +73,11 @@ let playerTurn1 = () => {
 }
 let playerTurn2 = () => {
   if (playerCount === 0) {
-    document.querySelector('.two').textContent = 'X'
+    document.querySelector('.two').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.two').textContent = 'O'
+    document.querySelector('.two').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.two').removeEventListener('click', playerTurn2)
@@ -87,11 +85,11 @@ let playerTurn2 = () => {
 }
 let playerTurn3 = () => {
   if (playerCount === 0) {
-    document.querySelector('.three').textContent = 'X'
+    document.querySelector('.three').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.three').textContent = 'O'
+    document.querySelector('.three').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.three').removeEventListener('click', playerTurn3)
@@ -99,11 +97,11 @@ let playerTurn3 = () => {
 }
 let playerTurn4 = () => {
   if (playerCount === 0) {
-    document.querySelector('.four').textContent = 'X'
+    document.querySelector('.four').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.four').textContent = 'O'
+    document.querySelector('.four').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.four').removeEventListener('click', playerTurn4)
@@ -111,11 +109,11 @@ let playerTurn4 = () => {
 }
 let playerTurn5 = () => {
   if (playerCount === 0) {
-    document.querySelector('.five').textContent = 'X'
+    document.querySelector('.five').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.five').textContent = 'O'
+    document.querySelector('.five').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.five').removeEventListener('click', playerTurn5)
@@ -123,11 +121,11 @@ let playerTurn5 = () => {
 }
 let playerTurn6 = () => {
   if (playerCount === 0) {
-    document.querySelector('.six').textContent = 'X'
+    document.querySelector('.six').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.six').textContent = 'O'
+    document.querySelector('.six').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.six').removeEventListener('click', playerTurn6)
@@ -135,11 +133,11 @@ let playerTurn6 = () => {
 }
 let playerTurn7 = () => {
   if (playerCount === 0) {
-    document.querySelector('.seven').textContent = 'X'
+    document.querySelector('.seven').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.seven').textContent = 'O'
+    document.querySelector('.seven').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.seven').removeEventListener('click', playerTurn7)
@@ -147,11 +145,11 @@ let playerTurn7 = () => {
 }
 let playerTurn8 = () => {
   if (playerCount === 0) {
-    document.querySelector('.eight').textContent = 'X'
+    document.querySelector('.eight').innerHTML = '<h3 class="red zero">X</h3>'
     playerCount = 1
   }
   else {
-    document.querySelector('.eight').textContent = 'O'
+    document.querySelector('.eight').innerHTML = '<h3 class="blue zero">O</h3>'
     playerCount = 0
   }
   document.querySelector('.eight').removeEventListener('click', playerTurn8)
