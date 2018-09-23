@@ -51,7 +51,7 @@ const checkWinner = () => {
 }
 let playerTurn0 = () => {
   if (playerCount === 0) {
-    document.querySelector('.zero').textContent = 'X'
+    document.querySelector('.zero').innerHTML = 'X'
     playerCount = 1
   }
   else {

@@ -61,15 +61,19 @@ button {
   background-color: transparent;
   font-weight: bold;
 }
+h3 {
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+}
 @media (min-width: 600px) {
   td {
     border: 6px solid black;
     width:140px;
     height: 140px;
-    font-size: 50px;
   }
-  /* h1, h2 {
-    font-size: 2rem; */
+  h3 {
+    font-size: 50px;
   }
   body {
     background-size: 600px 100%;
