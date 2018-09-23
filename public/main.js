@@ -1,12 +1,12 @@
-let playerX = 'X'
-let playerO = 'O'
+//let playerX = 'X'
+//let playerO = 'O'
 let playerCount = 0
 
 const checkWinner = () => {
   if (document.querySelector('.zero').textContent !== '' && document.querySelector('.one').textContent !== '' && document.querySelector('.two').textContent !== '' &&
     document.querySelector('.three').textContent !== '' && document.querySelector('.four').textContent !== '' && document.querySelector('.five').textContent !== '' &&
     document.querySelector('.six').textContent !== '' && document.querySelector('.seven').textContent !== '' && document.querySelector('.eight').textContent !== '') {
-    document.querySelector("h2").textContent = "DRAW"
+    document.querySelector('h2').textContent = 'DRAW'
   }
   if ((document.querySelector('.zero').textContent === 'X' && document.querySelector('.one').textContent === 'X' && document.querySelector('.two').textContent === 'X')
     || (document.querySelector('.three').textContent === 'X' && document.querySelector('.four').textContent === 'X' && document.querySelector('.five').textContent === 'X')
@@ -15,17 +15,18 @@ const checkWinner = () => {
     || (document.querySelector('.one').textContent === 'X' && document.querySelector('.four').textContent === 'X' && document.querySelector('.seven').textContent === 'X')
     || (document.querySelector('.two').textContent === 'X' && document.querySelector('.five').textContent === 'X' && document.querySelector('.eight').textContent === 'X')
     || (document.querySelector('.zero').textContent === 'X' && document.querySelector('.three').textContent === 'X' && document.querySelector('.six').textContent === 'X')
-    || (document.querySelector('.zero').textContent === 'X' && document.querySelector('.four').textContent === 'X' && document.querySelector('.eight').textContent === 'X')) {
-    document.querySelector("h2").textContent = "X wins"
-    document.querySelector('.zero').removeEventListener("click", playerTurn0)
-    document.querySelector('.one').removeEventListener("click", playerTurn1)
-    document.querySelector('.two').removeEventListener("click", playerTurn2)
-    document.querySelector('.three').removeEventListener("click", playerTurn3)
-    document.querySelector('.four').removeEventListener("click", playerTurn4)
-    document.querySelector('.five').removeEventListener("click", playerTurn5)
-    document.querySelector('.six').removeEventListener("click", playerTurn6)
-    document.querySelector('.seven').removeEventListener("click", playerTurn7)
-    document.querySelector('.eight').removeEventListener("click", playerTurn8)
+    || (document.querySelector('.zero').textContent === 'X' && document.querySelector('.four').textContent === 'X' && document.querySelector('.eight').textContent === 'X')
+    || (document.querySelector('.two').textContent === 'X' && document.querySelector('.four').textContent === 'X' && document.querySelector('.six').textContent === 'X')) {
+    document.querySelector('h2').textContent = 'X wins'
+    document.querySelector('.zero').removeEventListener('click', playerTurn0)
+    document.querySelector('.one').removeEventListener('click', playerTurn1)
+    document.querySelector('.two').removeEventListener('click', playerTurn2)
+    document.querySelector('.three').removeEventListener('click', playerTurn3)
+    document.querySelector('.four').removeEventListener('click', playerTurn4)
+    document.querySelector('.five').removeEventListener('click', playerTurn5)
+    document.querySelector('.six').removeEventListener('click', playerTurn6)
+    document.querySelector('.seven').removeEventListener('click', playerTurn7)
+    document.querySelector('.eight').removeEventListener('click', playerTurn8)
   }
   if ((document.querySelector('.zero').textContent === 'O' && document.querySelector('.one').textContent === 'O' && document.querySelector('.two').textContent === 'O')
     || (document.querySelector('.three').textContent === 'O' && document.querySelector('.four').textContent === 'O' && document.querySelector('.five').textContent === 'O')
@@ -34,137 +35,138 @@ const checkWinner = () => {
     || (document.querySelector('.one').textContent === 'O' && document.querySelector('.four').textContent === 'O' && document.querySelector('.seven').textContent === 'O')
     || (document.querySelector('.two').textContent === 'O' && document.querySelector('.five').textContent === 'O' && document.querySelector('.eight').textContent === 'O')
     || (document.querySelector('.zero').textContent === 'O' && document.querySelector('.three').textContent === 'O' && document.querySelector('.six').textContent === 'O')
-    || (document.querySelector('.zero').textContent === 'O' && document.querySelector('.four').textContent === 'O' && document.querySelector('.eight').textContent === 'O')) {
-    document.querySelector("h2").textContent = "O wins"
-    document.querySelector('.zero').removeEventListener("click", playerTurn0)
-    document.querySelector('.one').removeEventListener("click", playerTurn1)
-    document.querySelector('.two').removeEventListener("click", playerTurn2)
-    document.querySelector('.three').removeEventListener("click", playerTurn3)
-    document.querySelector('.four').removeEventListener("click", playerTurn4)
-    document.querySelector('.five').removeEventListener("click", playerTurn5)
-    document.querySelector('.six').removeEventListener("click", playerTurn6)
-    document.querySelector('.seven').removeEventListener("click", playerTurn7)
-    document.querySelector('.eight').removeEventListener("click", playerTurn8)
+    || (document.querySelector('.zero').textContent === 'O' && document.querySelector('.four').textContent === 'O' && document.querySelector('.eight').textContent === 'O')
+    || (document.querySelector('.two').textContent === 'O' && document.querySelector('.four').textContent === 'O' && document.querySelector('.six').textContent === 'O')) {
+    document.querySelector('h2').textContent = 'O wins'
+    document.querySelector('.zero').removeEventListener('click', playerTurn0)
+    document.querySelector('.one').removeEventListener('click', playerTurn1)
+    document.querySelector('.two').removeEventListener('click', playerTurn2)
+    document.querySelector('.three').removeEventListener('click', playerTurn3)
+    document.querySelector('.four').removeEventListener('click', playerTurn4)
+    document.querySelector('.five').removeEventListener('click', playerTurn5)
+    document.querySelector('.six').removeEventListener('click', playerTurn6)
+    document.querySelector('.seven').removeEventListener('click', playerTurn7)
+    document.querySelector('.eight').removeEventListener('click', playerTurn8)
   }
 }
 let playerTurn0 = () => {
   if (playerCount === 0) {
-    document.querySelector('.zero').textContent = playerX
+    document.querySelector('.zero').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.zero').textContent = playerO
+    document.querySelector('.zero').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.zero').removeEventListener("click", playerTurn0)
+  document.querySelector('.zero').removeEventListener('click', playerTurn0)
   checkWinner()
 }
 let playerTurn1 = () => {
   if (playerCount === 0) {
-    document.querySelector('.one').textContent = playerX
+    document.querySelector('.one').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.one').textContent = playerO
+    document.querySelector('.one').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.one').removeEventListener("click", playerTurn1)
+  document.querySelector('.one').removeEventListener('click', playerTurn1)
   checkWinner()
 }
 let playerTurn2 = () => {
   if (playerCount === 0) {
-    document.querySelector('.two').textContent = playerX
+    document.querySelector('.two').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.two').textContent = playerO
+    document.querySelector('.two').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.two').removeEventListener("click", playerTurn2)
+  document.querySelector('.two').removeEventListener('click', playerTurn2)
   checkWinner()
 }
 let playerTurn3 = () => {
   if (playerCount === 0) {
-    document.querySelector('.three').textContent = playerX
+    document.querySelector('.three').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.three').textContent = playerO
+    document.querySelector('.three').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.three').removeEventListener("click", playerTurn3)
+  document.querySelector('.three').removeEventListener('click', playerTurn3)
   checkWinner()
 }
 let playerTurn4 = () => {
   if (playerCount === 0) {
-    document.querySelector('.four').textContent = playerX
+    document.querySelector('.four').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.four').textContent = playerO
+    document.querySelector('.four').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.four').removeEventListener("click", playerTurn4)
+  document.querySelector('.four').removeEventListener('click', playerTurn4)
   checkWinner()
 }
 let playerTurn5 = () => {
   if (playerCount === 0) {
-    document.querySelector('.five').textContent = playerX
+    document.querySelector('.five').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.five').textContent = playerO
+    document.querySelector('.five').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.five').removeEventListener("click", playerTurn5)
+  document.querySelector('.five').removeEventListener('click', playerTurn5)
   checkWinner()
 }
 let playerTurn6 = () => {
   if (playerCount === 0) {
-    document.querySelector('.six').textContent = playerX
+    document.querySelector('.six').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.six').textContent = playerO
+    document.querySelector('.six').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.six').removeEventListener("click", playerTurn6)
+  document.querySelector('.six').removeEventListener('click', playerTurn6)
   checkWinner()
 }
 let playerTurn7 = () => {
   if (playerCount === 0) {
-    document.querySelector('.seven').textContent = playerX
+    document.querySelector('.seven').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.seven').textContent = playerO
+    document.querySelector('.seven').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.seven').removeEventListener("click", playerTurn7)
+  document.querySelector('.seven').removeEventListener('click', playerTurn7)
   checkWinner()
 }
 let playerTurn8 = () => {
   if (playerCount === 0) {
-    document.querySelector('.eight').textContent = playerX
+    document.querySelector('.eight').textContent = 'X'
     playerCount = 1
   }
   else {
-    document.querySelector('.eight').textContent = playerO
+    document.querySelector('.eight').textContent = 'O'
     playerCount = 0
   }
-  document.querySelector('.eight').removeEventListener("click", playerTurn8)
+  document.querySelector('.eight').removeEventListener('click', playerTurn8)
   checkWinner()
 }
 const main = () => {
-  document.querySelector(".zero").addEventListener('click', playerTurn0)
-  document.querySelector(".one").addEventListener('click', playerTurn1)
-  document.querySelector(".two").addEventListener('click', playerTurn2)
-  document.querySelector(".three").addEventListener('click', playerTurn3)
-  document.querySelector(".four").addEventListener('click', playerTurn4)
-  document.querySelector(".five").addEventListener('click', playerTurn5)
-  document.querySelector(".six").addEventListener('click', playerTurn6)
-  document.querySelector(".seven").addEventListener('click', playerTurn7)
-  document.querySelector(".eight").addEventListener('click', playerTurn8)
+  document.querySelector('.zero').addEventListener('click', playerTurn0)
+  document.querySelector('.one').addEventListener('click', playerTurn1)
+  document.querySelector('.two').addEventListener('click', playerTurn2)
+  document.querySelector('.three').addEventListener('click', playerTurn3)
+  document.querySelector('.four').addEventListener('click', playerTurn4)
+  document.querySelector('.five').addEventListener('click', playerTurn5)
+  document.querySelector('.six').addEventListener('click', playerTurn6)
+  document.querySelector('.seven').addEventListener('click', playerTurn7)
+  document.querySelector('.eight').addEventListener('click', playerTurn8)
 
   document.querySelector('.reset').addEventListener('click', () => {
     document.location = '/'
